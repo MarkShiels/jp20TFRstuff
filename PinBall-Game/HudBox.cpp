@@ -3,7 +3,7 @@
 HudBox::HudBox()
 {
 
-	outlineBox.setSize(sf::Vector2f(320, 800));
+	outlineBox.setSize(sf::Vector2f(320, 865));
 	outlineBox.setFillColor(sf::Color::Transparent);
 	outlineBox.setOutlineColor(sf::Color(238, 153, 15, 255));
 	outlineBox.setOutlineThickness(5);
@@ -13,6 +13,9 @@ HudBox::HudBox()
 	}
 
 	spaceBGSprite.setTexture(spaceBGTexture);
+
+	
+
 }
 
 

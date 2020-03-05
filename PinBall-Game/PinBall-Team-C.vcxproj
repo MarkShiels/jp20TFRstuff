@@ -19,13 +19,21 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ButtonLegend.cpp" />
+    <ClCompile Include="ConObjBox.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HudBox.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Startbox.cpp" />
+    <ClCompile Include="xBxCon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ButtonLegend.h" />
+    <ClInclude Include="ConObjBox.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="HudBox.h" />
+    <ClInclude Include="Startbox.h" />
+    <ClInclude Include="xBxCon.h" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="ASSETS\FONTS\ariblk.ttf">

@@ -11,6 +11,17 @@
 /// </summary>
 #include <SFML/Graphics.hpp>
 #include "HudBox.h"
+#include "ConObjBox.h"
+#include "xBxCon.h"
+#include "ButtonLegend.h"
+
+enum class GameState
+{
+	Gameplay,
+	Designer
+
+};
+
 class Game
 {
 public:
@@ -27,9 +38,23 @@ private:
 	sf::RectangleShape	hudSpace;
 	sf::Text			playerName;
 	sf::Text			playerScore;
+	sf::Text			missionInfo;
+	sf::Text			boardText;
+	sf::Text			ballCount;
 	sf::Font			font;
 
 	HudBox				hudBox;
+	ConObjBox			conObjsL[3];
+	ConObjBox			conObjsR[3];
+	int					yOffset{ 180 };
+
+	sf::Text			Title;
+
+	GameState			gameState;
+
+	xBxController		xCon;
+
+	ButtonLegend		buttLeg;
 
 	void processEvents();
 	void processKeys(sf::Event t_event);
