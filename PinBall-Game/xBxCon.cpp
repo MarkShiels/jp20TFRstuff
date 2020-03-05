@@ -46,6 +46,7 @@ void xBxController::update()
 	gamepad.update();
 	updateFace();
 	updateDpad();
+	updateSticks();
 }
 
 void xBxController::updateFace()
@@ -91,7 +92,12 @@ void xBxController::updateFace()
 		m_previousState.X = false;
 		m_currentState.X = false;
 	}
-	else if (m_currentState.X == false && m_previousState.X == false)
+	else
+	{
+		m_previousState.X = false;
+		m_currentState.X = true;
+	}
+	/*else if (m_currentState.X == false && m_previousState.X == false)
 	{
 		m_previousState.X = false;
 		m_currentState.X = true;
@@ -100,7 +106,7 @@ void xBxController::updateFace()
 	{
 		m_previousState.X = true;
 		m_currentState.X = false;
-	}
+	}*/
 
 //---------------------------------------------------------------------------
 
@@ -309,3 +315,13 @@ void xBxController::updateDpad()
 
 }
 
+void xBxController::updateSticks()
+{
+
+	leftStickAxis.x = gamepad.getAxisPosition(0, sf::Joystick::Axis::X);
+	leftStickAxis.y = gamepad.getAxisPosition(0, sf::Joystick::Axis::Y);
+
+	rightStickAxis.x = gamepad.getAxisPosition(0, sf::Joystick::Axis::U);
+	rightStickAxis.y = gamepad.getAxisPosition(0, sf::Joystick::Axis::V);
+
+}

@@ -153,16 +153,28 @@ void Game::render()
 	}
 	else if (gameState == GameState::Designer)
 	{
-		for (int i{ 0 }; i < 9; i++)
+		if (xCon.m_currentState.X)
 		{
-			m_window.draw(buttLeg.guideText[i]);
+			for (int i{ 0 }; i < 5; i++)
+			{
+				m_window.draw(buttLeg.butt[i]);
+				m_window.draw(buttLeg.buttonTags[i]);
+			}
 		}
+		else
+		{
+			for (int i{ 0 }; i < 9; i++)
+			{
+				m_window.draw(buttLeg.guideText[i]);
+			}
 
-		for (int i{ 0 }; i < 5; i++)
-		{
-			m_window.draw(buttLeg.butt[i]);
-			m_window.draw(buttLeg.buttonTags[i]);
+			for (int i{ 0 }; i < 9; i++)
+			{
+
+				m_window.draw(buttLeg.guideSprites[i]);
+			}
 		}
+		
 	}
 
 	m_window.draw(boardText);

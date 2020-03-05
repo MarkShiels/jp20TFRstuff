@@ -2,7 +2,7 @@
 #ifndef XBOXCONTROLLER
 #define XBOXCONTROLLER
 #include <SFML/Graphics.hpp>
-
+#include <iostream>
 class Game;
 
 enum controllerButtons//enum for controller buttons
@@ -37,8 +37,6 @@ struct GamePadState// states for the buttons
 	bool Menu;
 	float Righttrigger;
 	float LeftTrigger;
-	sf::Vector2f RightThumbStickAxis;
-	sf::Vector2f LeftThumbStickAxis;
 };
 
 class xBxController
@@ -73,7 +71,8 @@ public:
 	void update();
 	void updateFace();
 	void updateDpad();
-	
+	void updateSticks();
+
 };
 
 #endif
