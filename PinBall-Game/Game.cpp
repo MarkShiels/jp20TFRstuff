@@ -30,7 +30,7 @@ Game::Game() :
 	gameState = GameState::Gameplay;
 
 	buttLeg.init(font);
-
+	pause.init(font);
 	setupFontAndText(); // load font 
 	setupSprite(); // load texture
 }
@@ -124,6 +124,18 @@ void Game::update(sf::Time t_deltaTime)
 		}
 	}
 
+	if (xCon.m_currentState.Menu)
+	{
+		if (!paused)
+		{
+			paused = true;
+		}
+		else
+		{
+			paused = false;
+		}
+	}
+
 	if (m_exitGame)
 	{
 		m_window.close();
@@ -177,9 +189,21 @@ void Game::render()
 		
 	}
 
-	m_window.draw(boardText);
-	m_window.draw(Title);
+	if (paused)
+	{
+		m_window.draw(pause.pauseOverlay);
+		m_window.draw(pause.pauseText);
+		for (int i{ 0 }; i < 2; i++)
+		{
+			m_window.draw(pause.menuItems[i]);
+		}
+	}
+	else
+	{
+		m_window.draw(boardText);
+	}
 	
+	m_window.draw(Title);
 
 	m_window.display();
 }

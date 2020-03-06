@@ -164,7 +164,7 @@ void xBxController::updateFace()
 
 	//---------------------------------------------------------------------------
 
-	if (!gamepad.isButtonPressed(0, 6))
+	if (!gamepad.isButtonPressed(0, 8))
 	{
 		m_previousState.LeftThumbStickClick = false;
 		m_currentState.LeftThumbStickClick = false;
@@ -182,7 +182,7 @@ void xBxController::updateFace()
 
 	//---------------------------------------------------------------------------
 
-	if (!gamepad.isButtonPressed(0, 7))
+	if (!gamepad.isButtonPressed(0, 9))
 	{
 		m_previousState.RightThumbStickClick = false;
 		m_currentState.RightThumbStickClick = false;
@@ -200,7 +200,7 @@ void xBxController::updateFace()
 
 	//---------------------------------------------------------------------------
 
-	if (!gamepad.isButtonPressed(0, 8))
+	if (!gamepad.isButtonPressed(0, 6))
 	{
 		m_previousState.Options = false;
 		m_currentState.Options = false;
@@ -215,9 +215,10 @@ void xBxController::updateFace()
 		m_previousState.Options = true;
 		m_currentState.Options = false;
 	}
+
 	//---------------------------------------------------------------------------
 
-	if (!gamepad.isButtonPressed(0, 9))
+	if (!gamepad.isButtonPressed(0, 7))
 	{
 		m_previousState.Menu = false;
 		m_currentState.Menu = false;

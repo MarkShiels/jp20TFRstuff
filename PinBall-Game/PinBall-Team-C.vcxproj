@@ -24,7 +24,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HudBox.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Startbox.cpp" />
+    <ClCompile Include="Pausebox.cpp" />
     <ClCompile Include="xBxCon.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -32,7 +32,7 @@
     <ClInclude Include="ConObjBox.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="HudBox.h" />
-    <ClInclude Include="Startbox.h" />
+    <ClInclude Include="Pausebox.h" />
     <ClInclude Include="xBxCon.h" />
   </ItemGroup>
   <ItemGroup>

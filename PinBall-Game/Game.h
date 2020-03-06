@@ -14,6 +14,7 @@
 #include "ConObjBox.h"
 #include "xBxCon.h"
 #include "ButtonLegend.h"
+#include "Pausebox.h"
 
 enum class GameState
 {
@@ -55,6 +56,10 @@ private:
 	xBxController		xCon;
 
 	ButtonLegend		buttLeg;
+
+	Pausebox			pause;
+
+	bool				paused{false};
 
 	void processEvents();
 	void processKeys(sf::Event t_event);

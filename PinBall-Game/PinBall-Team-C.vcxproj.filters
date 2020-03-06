@@ -39,7 +39,7 @@
     <ClCompile Include="ButtonLegend.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Startbox.cpp">
+    <ClCompile Include="Pausebox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,7 +59,7 @@
     <ClInclude Include="ButtonLegend.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Startbox.h">
+    <ClInclude Include="Pausebox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
